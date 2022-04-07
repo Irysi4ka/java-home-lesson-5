@@ -11,6 +11,7 @@ public class WeightCalculatorPage {
     By inputRadioButtonManLocator = By.xpath("/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[5]/td[2]/input[1]");
     By inputRadioButtonWomenLocator = By.xpath("/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[5]/td[2]/input[2]");
     By buttonSubmitLocator = By.xpath("/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[6]/td/input");
+    By MESSAGE_RESULT = By.xpath("/html/body/table/tbody/tr[2]/td[2]");
 
     private final WebDriver driver;
 
@@ -46,6 +47,10 @@ public class WeightCalculatorPage {
     public WeightCalculatorPage pressButtonSubmit() {
         driver.findElement(buttonSubmitLocator).click();
         return this;
+    }
+
+    public By getMESSAGE_RESULT() {
+        return MESSAGE_RESULT;
     }
 
     public WeightCalculatorPage selectGender(String gender){
